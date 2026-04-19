@@ -2,7 +2,7 @@ import math
 import statistics
 import sys
 
-# Feature 1: Calculator solve Quadratic Equations
+# Feature 1: Calculator solve Quadratic Equations Solver
 
 def solve_quadratic():
     print ("Quadratic Equation Solver (ax^2 + bx + c = 0)")
