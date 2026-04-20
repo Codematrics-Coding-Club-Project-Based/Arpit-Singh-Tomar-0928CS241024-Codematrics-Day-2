@@ -75,7 +75,7 @@ D = b² - 4ac
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/Codematrics-Coding-Club-Project-Based/Arpit-Singh-Tomar-0928CS241024-Codematrics-Day-2.git
 ```
 2. Navigate to the folder:
 ```bash
