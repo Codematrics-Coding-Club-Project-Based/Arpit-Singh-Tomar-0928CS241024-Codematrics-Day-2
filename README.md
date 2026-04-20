@@ -1,7 +1,129 @@
 # Arpit-Singh-Tomar-0928CS241024-Codematrics-Day-2
 This is my Project Repository
 
-## Add 1st Feature - Quadratic Equation Solve ##
-<p>
-  Date : 19/04/2026
-</p>
+# 🧮 Python Calculator Project
+
+A simple command-line based calculator built using Python.  
+This project demonstrates core programming concepts like functions, loops, condition handling, and error handling.
+
+
+
+## 📌 Features
+
+### 🔢 1. Quadratic Equation Solver
+Solve equations of the form:
+
+```
+ax² + bx + c = 0
+```
+- Handles:
+  - ✅ Real & Distinct Roots
+  - ✅ Real & Equal Roots
+  - ✅ Complex Roots
+
+- Uses Discriminant Formula:
+
+```bash
+D = b² - 4ac
+```
+
+
+### 🧩 Feature Components Used
+---
+- input()
+- float()
+- if-elif-else
+- Arithmetic operators (+, -, *, /, **)
+- math.sqrt()
+- Comparison operators (>, ==, <)
+- try-except
+- print()
+
+### 📊 2. Factorial Calculator
+---
+- Calculates factorial of a given number (n!)
+- Handles invalid and negative inputs
+- Uses Python's built-in `math.factorial()`
+
+### 🧩 Feature Components Used
+---
+- input()
+- int()
+- if condition
+- math.factorial()
+- try-except
+- print()
+
+## 🛠️ Technologies Used
+
+- Python 🐍
+- Math Module
+- Command Line Interface (CLI)
+
+## ⚙️ Core Program Logic Used
+
+- main() function
+- while True loop
+- input() (user choice)
+- String comparison ("1", "2", "3")
+- if-elif-else
+- Function calling
+- sys.exit()
+
+
+## ▶️ How to Run the Project
+
+1. Clone the repository:
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+```
+2. Navigate to the folder:
+```bash
+cd your-repo-name
+```
+3. Run the program:
+```bash
+python main.py
+```
+## 📸 Sample Output
+```bash
+Welcome to the Python calculator!
+
+ Please select a Feature to use: 
+1. Quadratic Equation Calculator
+2. Factorial Calculator
+3. Exit
+
+Enter a choice (1-3): 2
+
+Factorial Calculator (n!)
+Enter a positive integer: 5
+The factorial of 5 is 120
+
+```
+## 📅 Updates
+### ✅ Day 1 Update (19/04/2026)
+- Added Quadratic Equation Solver
+- Implemented discriminant logic
+- Handled real and complex roots
+
+### ✅ Day 2 Update — 20/04/2026
+- Added Factorial Calculator
+- Fixed input handling bug (string vs integer)
+- Removed infinite recursion issue
+- Improved overall code structure
+- Added better error handling
+
+## 🚀 Future Improvements
+- Add more mathematical operations
+- Build GUI version (Tkinter)
+- Add calculation history
+- Convert into web app
+
+## 👨‍💻 Author
+```
+Arpit Singh Tomar
+B.Tech CSE Student
+```
+## ⭐ Support
+If you like this project, give it a ⭐ on GitHub!

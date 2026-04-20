@@ -31,4 +31,51 @@ def solve_quadratic():
     except ValueError:
         print("Invalid input. Please enter numeric values for a, b, and c.")    
 
-solve_quadratic()
+
+
+# Feature 2: Factorial Calculator
+def calculate_factorial():
+    print("Factorial Calculator (n!)")
+
+    try:
+        n = int(input("Enter a positive integer: "))
+        if n < 0:
+            print("Please enter a positive integer.")
+            return
+        result = math.factorial(n)
+        print(f"The factorial of {n} is {result}")
+    except ValueError:
+        print("Invalid input. Please enter a valid integer.")
+
+
+
+
+
+# Define Main Function for the program
+def main():
+    print("Welcome to the Python calculator!")
+
+    while True:
+
+        print("\n Please select a Feature to use: ")
+        print("1. Quadratic Equation Calculator")
+        print("2. Factorial Calculator")
+        print("3. Exit")
+
+        choice = input("Enter a choice (1-3): ")
+
+        if choice == "1":
+            solve_quadratic()
+
+        elif choice == "2":
+            calculate_factorial()
+
+        elif choice == "3":
+
+            print("Exiting the calculator program. Goodbye!")
+            sys.exit()
+            
+        else :
+            print("Invalid choice. Please select a valid option (1-3). ")
+
+main()
