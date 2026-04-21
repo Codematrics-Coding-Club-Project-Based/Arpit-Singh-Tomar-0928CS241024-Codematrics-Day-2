@@ -54,6 +54,40 @@ D = b² - 4ac
 - try-except
 - print()
 
+### 🧮 3. Matrix Utilities
+---
+Perform various matrix operations using pure Python implementation.
+
+- Supports:
+  - ✅ Matrix Addition
+  - ✅ Matrix Subtraction
+  - ✅ Matrix Multiplication
+  - ✅ Matrix Transpose
+  - ✅ Determinant Calculation
+  - ✅ Inverse of Matrix
+
+- Works with:
+  - User-defined matrix size
+  - Dynamic input values
+
+
+### 🧩 Feature Components Used
+---
+- input()
+- float()
+- int()
+- if-elif-else
+- while True
+- Nested loops (for)
+- Lists (2D lists)
+- List comprehension
+- Arithmetic operators (+, -, *, /)
+- Function calling
+- Recursion (determinant)
+- try-except
+- print()
+- f-strings
+
 ## 🛠️ Technologies Used
 
 - Python 🐍
@@ -113,6 +147,19 @@ The factorial of 5 is 120
 - Removed infinite recursion issue
 - Improved overall code structure
 - Added better error handling
+
+### ✅ Day 3 Update — 21/04/2026
+- Added Matrix Utilities feature
+- Implemented:
+  - Matrix Addition
+  - Matrix Subtraction
+  - Matrix Multiplication
+  - Matrix Transpose
+  - Determinant Calculation (Recursion)
+  - Inverse of Matrix
+- Used pure Python (no external libraries)
+- Added dynamic matrix input system
+- Improved program modularity
 
 ## 🚀 Future Improvements
 - Add more mathematical operations

@@ -2,6 +2,8 @@ import math
 import statistics
 import sys
 
+
+
 # Feature 1: Calculator solve Quadratic Equations Solver
 
 def solve_quadratic():
@@ -48,6 +50,183 @@ def calculate_factorial():
         print("Invalid input. Please enter a valid integer.")
 
 
+# Feature 3: Matrix Utilities (Pure Python Implementation)
+
+def create_matrix(rows, cols, name):
+    print(f"Creating {name} Matrix ({rows}x{cols})")
+    matrix = []
+    for i in range(rows):
+        row = []
+        for j in range(cols):
+            while True:
+                try:
+                    value = float(input(f"Enter value for {name}[{i+1}][{j+1}]: "))
+                    row.append(value)
+                    break
+                except ValueError:
+                    print("Invalid input. Please enter a numeric value.")
+        matrix.append(row)
+    return matrix
+
+def add_matrices(matrix_a, matrix_b):
+    if len(matrix_a) != len(matrix_b) or len(matrix_a[0]) != len(matrix_b[0]):
+        print("Error: Matrices must have the same dimensions for addition.")
+        return None
+    result = []
+    for i in range(len(matrix_a)):
+        row = []
+        for j in range(len(matrix_a[0])):
+            row.append(matrix_a[i][j] + matrix_b[i][j])
+        result.append(row)
+    return result
+
+def subtract_matrices(matrix_a, matrix_b):
+    if len(matrix_a) != len(matrix_b) or len(matrix_a[0]) != len(matrix_b[0]):
+        print("Error: Matrices must have the same dimensions for subtraction.")
+        return None
+    result = []
+    for i in range(len(matrix_a)):
+        row = []
+        for j in range(len(matrix_a[0])):
+            row.append(matrix_a[i][j] - matrix_b[i][j])
+        result.append(row)
+    return result
+
+def multiply_matrices(matrix_a, matrix_b):
+    if len(matrix_a[0]) != len(matrix_b):
+        print("Error: Number of columns in the first matrix must equal the number of rows in the second matrix for multiplication.")
+        return None
+    result = []
+    for i in range(len(matrix_a)):
+        row = []
+        for j in range(len(matrix_b[0])):
+            sum_product = 0
+            for k in range(len(matrix_a[0])):
+                sum_product += matrix_a[i][k] * matrix_b[k][j]
+            row.append(sum_product)
+        result.append(row)
+    return result
+
+def transpose_matrix(matrix):
+    result = []
+    for j in range(len(matrix[0])):
+        row = []
+        for i in range(len(matrix)):
+            row.append(matrix[i][j])
+        result.append(row)
+    return result
+
+def determinant(matrix):
+    if len(matrix) != len(matrix[0]):
+        print("Error: Determinant can only be calculated for square matrices.")
+        return None
+    if len(matrix) == 1:
+        return matrix[0][0]
+    if len(matrix) == 2:
+        return matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0]
+    
+    det = 0
+    for c in range(len(matrix)):
+        sub_matrix = [row[:c] + row[c+1:] for row in matrix[1:]]
+        det += ((-1)**c) * matrix[0][c] * determinant(sub_matrix)
+    return det
+
+def inverse_matrix(matrix):
+    det = determinant(matrix)
+    if det == 0:
+        print("Error: Matrix is singular and cannot be inverted.")
+        return None
+    if len(matrix) == 1:
+        return [[1 / matrix[0][0]]]
+    
+    # Calculate the cofactor matrix
+    cofactor_matrix = []
+    for i in range(len(matrix)):
+        cofactor_row = []
+        for j in range(len(matrix)):
+            sub_matrix = [row[:j] + row[j+1:] for row in (matrix[:i] + matrix[i+1:])]
+            cofactor_row.append(((-1)**(i+j)) * determinant(sub_matrix))
+        cofactor_matrix.append(cofactor_row)
+    
+    # Transpose the cofactor matrix to get the adjugate
+    adjugate = transpose_matrix(cofactor_matrix)
+    
+    # Divide the adjugate by the determinant to get the inverse
+    inverse = []
+    for i in range(len(adjugate)):
+        row = []
+        for j in range(len(adjugate[0])):
+            row.append(adjugate[i][j] / det)
+        inverse.append(row)
+    
+    return inverse
+
+def display_matrix(matrix):
+    for row in matrix:
+        print(" ".join(f"{value:.2f}" for value in row))    
+
+def matrix_operations():
+    while True:
+        print("\nMatrix Operations")
+        print("1. Add Matrices")
+        print("2. Subtract Matrices")
+        print("3. Multiply Matrices")
+        print("4. Transpose Matrix")
+        print("5. Determinant of Matrix")
+        print("6. Inverse of Matrix")
+        print("7. Back to Main Menu")
+
+        choice = input("Enter your choice: ")
+
+        if choice in ["1", "2", "3"]:
+            rows = int(input("Enter number of rows: "))
+            cols = int(input("Enter number of columns: "))
+
+            A = create_matrix(rows, cols, "A")
+            B = create_matrix(rows, cols, "B")
+
+            if choice == "1":
+                result = add_matrices(A, B)
+            elif choice == "2":
+                result = subtract_matrices(A, B)
+            elif choice == "3":
+                result = multiply_matrices(A, B)
+
+            if result:
+                print("Result:")
+                display_matrix(result)
+
+        elif choice == "4":
+            rows = int(input("Enter number of rows: "))
+            cols = int(input("Enter number of columns: "))
+            A = create_matrix(rows, cols, "A")
+
+            result = transpose_matrix(A)
+            print("Transpose:")
+            display_matrix(result)
+
+        elif choice == "5":
+            n = int(input("Enter size of square matrix (n x n): "))
+            A = create_matrix(n, n, "A")
+
+            det = determinant(A)
+            print(f"Determinant: {det}")
+
+        elif choice == "6":
+            n = int(input("Enter size of square matrix (n x n): "))
+            A = create_matrix(n, n, "A")
+
+            inv = inverse_matrix(A)
+            if inv:
+                print("Inverse:")
+                display_matrix(inv)
+
+        elif choice == "7":
+            break
+
+        else:
+            print("Invalid choice. Try again.")
+
 
 
 
@@ -60,9 +239,10 @@ def main():
         print("\n Please select a Feature to use: ")
         print("1. Quadratic Equation Calculator")
         print("2. Factorial Calculator")
-        print("3. Exit")
+        print("3. Matrix Utilities")
+        print("4. Exit")
 
-        choice = input("Enter a choice (1-3): ")
+        choice = input("Enter a choice (1-4): ")
 
         if choice == "1":
             solve_quadratic()
@@ -71,11 +251,14 @@ def main():
             calculate_factorial()
 
         elif choice == "3":
+            matrix_operations()
 
+
+        elif choice == "4": 
             print("Exiting the calculator program. Goodbye!")
             sys.exit()
             
         else :
-            print("Invalid choice. Please select a valid option (1-3). ")
+            print("Invalid choice. Please select a valid option (1-4). ")
 
 main()
