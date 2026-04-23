@@ -228,6 +228,23 @@ def matrix_operations():
             print("Invalid choice. Try again.")
 
 
+# Feature 4: Square root calculator feature
+
+def calculate_square_root():
+    print("Square Root Calculator")
+
+    try:
+        number = float(input("Enter a non-negative number: "))
+        if number < 0:
+            print("Please enter a non-negative number.")
+            return
+        result = math.sqrt(number)
+        print(f"The square root of {number} is {result}")
+    except ValueError:
+        print("Invalid input. Please enter a valid number.")
+
+
+
 
 
 # Define Main Function for the program
@@ -240,9 +257,10 @@ def main():
         print("1. Quadratic Equation Calculator")
         print("2. Factorial Calculator")
         print("3. Matrix Utilities")
-        print("4. Exit")
+        print("4. Square Root Calculator")
+        print("5. Exit")
 
-        choice = input("Enter a choice (1-4): ")
+        choice = input("Enter a choice (1-5): ")
 
         if choice == "1":
             solve_quadratic()
@@ -253,8 +271,11 @@ def main():
         elif choice == "3":
             matrix_operations()
 
+        elif choice == "4":
+            calculate_square_root()
 
-        elif choice == "4": 
+
+        elif choice == "5": 
             print("Exiting the calculator program. Goodbye!")
             sys.exit()
             

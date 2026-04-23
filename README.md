@@ -88,6 +88,30 @@ Perform various matrix operations using pure Python implementation.
 - print()
 - f-strings
 
+### √ 4. Square Root Calculator
+---
+Calculate the square root of a given number.
+
+- Handles:
+  - ✅ Valid numeric input
+  - ✅ Non-negative numbers only
+  - ❌ Rejects negative values
+
+- Uses:
+  - math.sqrt()
+
+### 🧩 Feature Components Used
+---
+- input()
+- float()
+- if condition
+- math.sqrt()
+- Comparison operator (<)
+- try-except
+- print()
+- f-strings
+
+
 ## 🛠️ Technologies Used
 
 - Python 🐍
@@ -160,6 +184,11 @@ The factorial of 5 is 120
 - Used pure Python (no external libraries)
 - Added dynamic matrix input system
 - Improved program modularity
+
+### ✅ Day 4 Update — 22/04/2026
+- Added Square Root Calculator
+- Implemented validation for non-negative input
+- Improved user input handling
 
 ## 🚀 Future Improvements
 - Add more mathematical operations
