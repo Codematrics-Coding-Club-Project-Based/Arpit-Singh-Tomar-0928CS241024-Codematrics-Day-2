@@ -111,6 +111,58 @@ Calculate the square root of a given number.
 - print()
 - f-strings
 
+### ⚡ 5. Power Calculator (x^y)
+---
+Calculate the value of a number raised to a given power.
+
+- Handles:
+  - ✅ Positive and negative values
+  - ✅ Decimal inputs
+  - ✅ Zero exponent cases
+
+- Uses:
+  - math.pow()
+
+
+### 🧩 Feature Components Used
+---
+- input()
+- float()
+- math.pow()
+- try-except
+- print()
+- f-strings
+
+### 📐 6. Linear Equation Solver (Gaussian Elimination)
+Solve a system of linear equations using Gaussian Elimination method.
+
+- Handles:
+  - ✅ Multiple variables (n x n system)
+  - ✅ Dynamic user input
+  - ✅ Forward elimination
+  - ✅ Back substitution
+
+- Uses:
+  - Gaussian Elimination Method
+
+
+
+### 🧩 Feature Components Used
+---
+- input()
+- int()
+- float()
+- Lists (2D lists)
+- Nested loops (for)
+- Range with step (range)
+- Arithmetic operators (+, -, *, /)
+- List initialization ([0] * n)
+- sum() function
+- if condition
+- try-except
+- print()
+- f-strings
+
 
 ## 🛠️ Technologies Used
 
@@ -189,6 +241,19 @@ The factorial of 5 is 120
 - Added Square Root Calculator
 - Implemented validation for non-negative input
 - Improved user input handling
+
+### ✅ Day 5 Update — 23/04/2026
+- Added Power Calculator (x^y)
+- Implemented exponentiation using math.pow()
+- Improved numeric input handling
+
+### ✅ Day 6 Update — 24/04/2026
+- Added Linear Equation Solver
+- Implemented Gaussian Elimination method
+- Included forward elimination and back substitution
+- Supports dynamic number of variables
+- Improved mathematical computation capabilities
+
 
 ## 🚀 Future Improvements
 - Add more mathematical operations

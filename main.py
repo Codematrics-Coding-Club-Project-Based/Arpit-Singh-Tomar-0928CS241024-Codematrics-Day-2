@@ -244,6 +244,59 @@ def calculate_square_root():
         print("Invalid input. Please enter a valid number.")
 
 
+# Feature 5: Power Calculator (x^y)
+
+def calculate_power():
+    print("Power Calculator (x^y)")
+
+    try:
+        base = float(input("Enter the base (x): "))
+        exponent = float(input("Enter the exponent (y): "))
+        result = math.pow(base, exponent)
+        print(f"{base} raised to the power of {exponent} is {result}")
+    except ValueError:
+        print("Invalid input. Please enter valid numbers for base and exponent.")
+
+
+# Feature 6: Linear Equation Solver (Gaussian Elimination Method)
+
+def solve_linear_equations():
+    print("Linear Equation Solver (Gaussian Elimination)")
+
+    try:
+        n = int(input("Enter the number of variables: "))
+        A = []
+        b = []
+
+        print("Enter the coefficients of the equations:")
+        for i in range(n):
+            row = []
+            for j in range(n):
+                value = float(input(f"Coefficient of variable {j+1} in equation {i+1}: "))
+                row.append(value)
+            A.append(row)
+            constant = float(input(f"Constant term for equation {i+1}: "))
+            b.append(constant)
+
+        # Forward elimination
+        for i in range(n):
+            for j in range(i+1, n):
+                factor = A[j][i] / A[i][i]
+                for k in range(i, n):
+                    A[j][k] -= factor * A[i][k]
+                b[j] -= factor * b[i]
+
+        # Back substitution
+        x = [0] * n
+        for i in range(n-1, -1, -1):
+            x[i] = (b[i] - sum(A[i][j] * x[j] for j in range(i+1, n))) / A[i][i]
+
+        print("Solution:")
+        for i in range(n):
+            print(f"x{i+1} = {x[i]}")
+
+    except ValueError:
+        print("Invalid input. Please enter valid numbers and integers where required.")
 
 
 
@@ -258,9 +311,10 @@ def main():
         print("2. Factorial Calculator")
         print("3. Matrix Utilities")
         print("4. Square Root Calculator")
-        print("5. Exit")
+        print("5. Power Calculator")
+        print("6. Exit")
 
-        choice = input("Enter a choice (1-5): ")
+        choice = input("Enter a choice (1-6): ")
 
         if choice == "1":
             solve_quadratic()
@@ -275,11 +329,14 @@ def main():
             calculate_square_root()
 
 
-        elif choice == "5": 
+        elif choice == "5":
+            calculate_power()
+
+        elif choice == "6":
             print("Exiting the calculator program. Goodbye!")
             sys.exit()
-            
-        else :
-            print("Invalid choice. Please select a valid option (1-4). ")
+
+        else:
+            print("Invalid choice. Please select a valid option (1-6). ")
 
 main()
