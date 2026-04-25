@@ -134,6 +134,7 @@ Calculate the value of a number raised to a given power.
 - f-strings
 
 ### 📐 6. Linear Equation Solver (Gaussian Elimination)
+---
 Solve a system of linear equations using Gaussian Elimination method.
 
 - Handles:
@@ -159,6 +160,31 @@ Solve a system of linear equations using Gaussian Elimination method.
 - List initialization ([0] * n)
 - sum() function
 - if condition
+- try-except
+- print()
+- f-strings
+
+### 🌡️ 7. Temperature Converter (Celsius ↔ Fahrenheit)
+---
+Convert temperature between Celsius and Fahrenheit.
+
+- Handles:
+  - ✅ Celsius to Fahrenheit conversion
+  - ✅ Fahrenheit to Celsius conversion
+  - ✅ User choice selection
+  - ❌ Invalid option handling
+
+- Uses:
+  - Conversion formulas
+
+
+
+### 🧩 Feature Components Used
+---
+- input()
+- float()
+- if-elif-else
+- Arithmetic operators (+, -, *, /)
 - try-except
 - print()
 - f-strings
@@ -253,6 +279,12 @@ The factorial of 5 is 120
 - Included forward elimination and back substitution
 - Supports dynamic number of variables
 - Improved mathematical computation capabilities
+
+### ✅ Day 7 Update — 25/04/2026
+- Added Temperature Converter
+- Implemented Celsius ↔ Fahrenheit conversion
+- Added user choice-based conversion system
+- Improved real-world usability of application
 
 
 ## 🚀 Future Improvements

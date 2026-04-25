@@ -299,6 +299,32 @@ def solve_linear_equations():
         print("Invalid input. Please enter valid numbers and integers where required.")
 
 
+# Feature 7: Temperature Converter(Celcius to Fahrenheit and vice versa)
+
+def temperature_converter():
+    print("Temperature Converter")
+
+    try:
+        choice = input("Convert from (1) Celsius to Fahrenheit or (2) Fahrenheit to Celsius? Enter 1 or 2: ")
+
+        if choice == "1":
+            celsius = float(input("Enter temperature in Celsius: "))
+            fahrenheit = (celsius * 9/5) + 32
+            print(f"{celsius}°C is equal to {fahrenheit}°F")
+
+        elif choice == "2":
+            fahrenheit = float(input("Enter temperature in Fahrenheit: "))
+            celsius = (fahrenheit - 32) * 5/9
+            print(f"{fahrenheit}°F is equal to {celsius}°C")
+
+        else:
+            print("Invalid choice. Please enter 1 or 2.")
+
+    except ValueError:
+        print("Invalid input. Please enter a valid number for temperature.")
+
+
+
 
 # Define Main Function for the program
 def main():
@@ -312,9 +338,10 @@ def main():
         print("3. Matrix Utilities")
         print("4. Square Root Calculator")
         print("5. Power Calculator")
-        print("6. Exit")
+        print("6. Temperature Converter")
+        print("7. Exit")
 
-        choice = input("Enter a choice (1-6): ")
+        choice = input("Enter a choice (1-7): ")
 
         if choice == "1":
             solve_quadratic()
@@ -333,10 +360,14 @@ def main():
             calculate_power()
 
         elif choice == "6":
+            temperature_converter()
+
+        elif choice == "7":
             print("Exiting the calculator program. Goodbye!")
             sys.exit()
 
         else:
-            print("Invalid choice. Please select a valid option (1-6). ")
+            print("Invalid choice. Please select a valid option (1-7). ")
+
 
 main()
