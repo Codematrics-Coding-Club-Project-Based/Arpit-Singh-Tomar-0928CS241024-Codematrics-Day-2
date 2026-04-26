@@ -189,6 +189,31 @@ Convert temperature between Celsius and Fahrenheit.
 - print()
 - f-strings
 
+### 📏 8. Length Converter (Meters ↔ Feet)
+Convert length between meters and feet.
+
+- Handles:
+  - ✅ Meters to Feet conversion
+  - ✅ Feet to Meters conversion
+  - ✅ User choice selection
+  - ❌ Invalid option handling
+
+- Uses:
+  - Conversion formula
+
+---
+
+### 🧩 Feature Components Used
+---
+- input()
+- float()
+- if-elif-else
+- Arithmetic operators (*, /)
+- try-except
+- print()
+- f-strings
+
+
 
 ## 🛠️ Technologies Used
 
@@ -285,6 +310,12 @@ The factorial of 5 is 120
 - Implemented Celsius ↔ Fahrenheit conversion
 - Added user choice-based conversion system
 - Improved real-world usability of application
+
+### ✅ Day 8 Update — 26/04/2026
+- Added Length Converter
+- Implemented Meters ↔ Feet conversion
+- Added user choice-based conversion system
+- Improved real-world utility features
 
 
 ## 🚀 Future Improvements

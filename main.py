@@ -324,6 +324,31 @@ def temperature_converter():
         print("Invalid input. Please enter a valid number for temperature.")
 
 
+# Feature 8: Length Converter (Meters to Feet,kilometers , centimeters , etc and vice versa)
+
+def length_converter():
+    print("Length Converter")
+
+    try:
+        choice = input("Convert from (1) Meters to Feet or (2) Feet to Meters? Enter 1 or 2: ")
+
+        if choice == "1":
+            meters = float(input("Enter length in meters: "))
+            feet = meters * 3.28084
+            print(f"{meters} meters is equal to {feet} feet")
+
+        elif choice == "2":
+            feet = float(input("Enter length in feet: "))
+            meters = feet / 3.28084
+            print(f"{feet} feet is equal to {meters} meters")
+
+        else:
+            print("Invalid choice. Please enter 1 or 2.")
+
+    except ValueError:
+        print("Invalid input. Please enter a valid number for length.")
+
+
 
 
 # Define Main Function for the program
@@ -339,9 +364,10 @@ def main():
         print("4. Square Root Calculator")
         print("5. Power Calculator")
         print("6. Temperature Converter")
-        print("7. Exit")
+        print("7. Length Converter")
+        print("8. Exit")
 
-        choice = input("Enter a choice (1-7): ")
+        choice = input("Enter a choice (1-8): ")
 
         if choice == "1":
             solve_quadratic()
@@ -363,11 +389,14 @@ def main():
             temperature_converter()
 
         elif choice == "7":
+            length_converter()
+
+        elif choice == "8":
             print("Exiting the calculator program. Goodbye!")
             sys.exit()
 
         else:
-            print("Invalid choice. Please select a valid option (1-7). ")
+            print("Invalid choice. Please select a valid option (1-8). ")
 
 
 main()
