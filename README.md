@@ -190,6 +190,7 @@ Convert temperature between Celsius and Fahrenheit.
 - f-strings
 
 ### 📏 8. Length Converter (Meters ↔ Feet)
+---
 Convert length between meters and feet.
 
 - Handles:
@@ -201,7 +202,6 @@ Convert length between meters and feet.
 - Uses:
   - Conversion formula
 
----
 
 ### 🧩 Feature Components Used
 ---
