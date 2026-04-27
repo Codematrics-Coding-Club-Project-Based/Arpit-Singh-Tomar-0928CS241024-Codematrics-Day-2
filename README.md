@@ -213,6 +213,33 @@ Convert length between meters and feet.
 - print()
 - f-strings
 
+### 📐 9. Area & Perimeter Calculator (Circle, Rectangle, Triangle)
+---
+Calculate area and perimeter for different geometric shapes.
+
+- Handles:
+  - ✅ Circle (Area & Circumference)
+  - ✅ Rectangle (Area & Perimeter)
+  - ✅ Triangle (Area & Perimeter)
+  - ❌ Invalid shape handling
+
+- Uses:
+  - math.pi
+  - Geometric formulas
+
+
+
+### 🧩 Feature Components Used
+---
+- input()
+- float()
+- if-elif-else
+- Arithmetic operators (+, -, *, /, **)
+- math.pi
+- try-except
+- print()
+- f-strings
+- .lower() (string handling)
 
 
 ## 🛠️ Technologies Used
@@ -316,6 +343,12 @@ The factorial of 5 is 120
 - Implemented Meters ↔ Feet conversion
 - Added user choice-based conversion system
 - Improved real-world utility features
+
+### ✅ Day 9 Update — 27/04/2026
+- Added Area & Perimeter Calculator
+- Implemented calculations for circle, rectangle, and triangle
+- Used geometric formulas for accurate results
+- Added shape-based input system
 
 
 ## 🚀 Future Improvements

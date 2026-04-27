@@ -350,6 +350,49 @@ def length_converter():
 
 
 
+# Feature 9: Area and Perimeter calculator for different shapes(circle, rectangle, triangle, etc)
+
+
+def area_perimeter_calculator():
+    print("Area and Perimeter Calculator")
+
+    try:
+        shape = input("Select a shape (circle, rectangle, triangle): ").lower()
+
+        if shape == "circle":
+            radius = float(input("Enter the radius of the circle: "))
+            area = math.pi * radius**2
+            perimeter = 2 * math.pi * radius
+            print(f"Area of the circle: {area}")
+            print(f"Perimeter of the circle: {perimeter}")
+
+        elif shape == "rectangle":
+            length = float(input("Enter the length of the rectangle: "))
+            width = float(input("Enter the width of the rectangle: "))
+            area = length * width
+            perimeter = 2 * (length + width)
+            print(f"Area of the rectangle: {area}")
+            print(f"Perimeter of the rectangle: {perimeter}")
+
+        elif shape == "triangle":
+            base = float(input("Enter the base of the triangle: "))
+            height = float(input("Enter the height of the triangle: "))
+            area = 0.5 * base * height
+            side1 = float(input("Enter length of side 1: "))
+            side2 = float(input("Enter length of side 2: "))
+            side3 = float(input("Enter length of side 3: "))
+            perimeter = side1 + side2 + side3
+            print(f"Area of the triangle: {area}")
+            print(f"Perimeter of the triangle: {perimeter}")
+
+        else:
+            print("Invalid shape. Please select from circle, rectangle, or triangle.")
+
+    except ValueError:
+        print("Invalid input. Please enter valid numbers for dimensions.")
+
+
+
 
 # Define Main Function for the program
 def main():
@@ -365,9 +408,10 @@ def main():
         print("5. Power Calculator")
         print("6. Temperature Converter")
         print("7. Length Converter")
-        print("8. Exit")
+        print("8. Area and Perimeter Calculator")
+        print("9. Exit")
 
-        choice = input("Enter a choice (1-8): ")
+        choice = input("Enter a choice (1-9): ")
 
         if choice == "1":
             solve_quadratic()
@@ -392,11 +436,14 @@ def main():
             length_converter()
 
         elif choice == "8":
+            area_perimeter_calculator()
+
+        elif choice == "9":
             print("Exiting the calculator program. Goodbye!")
             sys.exit()
 
         else:
-            print("Invalid choice. Please select a valid option (1-8). ")
+            print("Invalid choice. Please select a valid option (1-9). ")
 
 
 main()
