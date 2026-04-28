@@ -241,6 +241,34 @@ Calculate area and perimeter for different geometric shapes.
 - f-strings
 - .lower() (string handling)
 
+### 🧊 10. Volume Calculator (Sphere, Cube, Cylinder)
+---
+Calculate volume for different 3D shapes.
+
+- Handles:
+  - ✅ Sphere
+  - ✅ Cube
+  - ✅ Cylinder
+  - ❌ Invalid shape handling
+
+- Uses:
+  - math.pi
+  - Volume formulas
+
+
+### 🧩 Feature Components Used
+---
+- input()
+- float()
+- if-elif-else
+- Arithmetic operators (*, /, **)
+- math.pi
+- try-except
+- print()
+- f-strings
+- .lower() (string handling)
+
+
 
 ## 🛠️ Technologies Used
 
@@ -349,6 +377,12 @@ The factorial of 5 is 120
 - Implemented calculations for circle, rectangle, and triangle
 - Used geometric formulas for accurate results
 - Added shape-based input system
+
+### ✅ Day 10 Update — 28/04/2026
+- Added Volume Calculator
+- Implemented volume formulas for sphere, cube, and cylinder
+- Added shape-based input system
+- Improved geometric calculation features
 
 
 ## 🚀 Future Improvements

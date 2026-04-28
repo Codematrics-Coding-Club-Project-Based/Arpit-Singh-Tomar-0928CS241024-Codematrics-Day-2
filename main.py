@@ -392,6 +392,37 @@ def area_perimeter_calculator():
         print("Invalid input. Please enter valid numbers for dimensions.")
 
 
+# Feature 9: Volume Calculator for different shapes (circle , rectangle, triangle, etc)
+
+def volume_calculator():
+    print("Volume Calculator")
+
+    try:
+        shape = input("Select a shape (sphere, cube, cylinder): ").lower()
+
+        if shape == "sphere":
+            radius = float(input("Enter the radius of the sphere: "))
+            volume = (4/3) * math.pi * radius**3
+            print(f"Volume of the sphere: {volume}")
+
+        elif shape == "cube":
+            side = float(input("Enter the side length of the cube: "))
+            volume = side**3
+            print(f"Volume of the cube: {volume}")
+
+        elif shape == "cylinder":
+            radius = float(input("Enter the radius of the cylinder: "))
+            height = float(input("Enter the height of the cylinder: "))
+            volume = math.pi * radius**2 * height
+            print(f"Volume of the cylinder: {volume}")
+
+        else:
+            print("Invalid shape. Please select from sphere, cube, or cylinder.")
+
+    except ValueError:
+        print("Invalid input. Please enter valid numbers for dimensions.")
+
+
 
 
 # Define Main Function for the program
@@ -409,9 +440,10 @@ def main():
         print("6. Temperature Converter")
         print("7. Length Converter")
         print("8. Area and Perimeter Calculator")
-        print("9. Exit")
+        print("9. Volume Calculator")
+        print("10. Exit")
 
-        choice = input("Enter a choice (1-9): ")
+        choice = input("Enter a choice (1-10): ")
 
         if choice == "1":
             solve_quadratic()
@@ -439,11 +471,14 @@ def main():
             area_perimeter_calculator()
 
         elif choice == "9":
+            volume_calculator()
+
+        elif choice == "10":
             print("Exiting the calculator program. Goodbye!")
             sys.exit()
 
         else:
-            print("Invalid choice. Please select a valid option (1-9). ")
+            print("Invalid choice. Please select a valid option (1-10). ")
 
 
 main()
