@@ -424,6 +424,31 @@ def volume_calculator():
 
 
 
+# Feature 10: Volume converter (cubic meters to liters, cubic feet to gallons, etc and vice versa)
+
+def volume_converter():
+    print("Volume Converter")
+
+    try:
+        choice = input("Convert from (1) Cubic Meters to Liters or (2) Liters to Cubic Meters? Enter 1 or 2: ")
+
+        if choice == "1":
+            cubic_meters = float(input("Enter volume in cubic meters: "))
+            liters = cubic_meters * 1000
+            print(f"{cubic_meters} cubic meters is equal to {liters} liters")
+
+        elif choice == "2":
+            liters = float(input("Enter volume in liters: "))
+            cubic_meters = liters / 1000
+            print(f"{liters} liters is equal to {cubic_meters} cubic meters")
+
+        else:
+            print("Invalid choice. Please enter 1 or 2.")
+
+    except ValueError:
+        print("Invalid input. Please enter a valid number for volume.")
+        
+
 
 # Define Main Function for the program
 def main():
@@ -441,9 +466,10 @@ def main():
         print("7. Length Converter")
         print("8. Area and Perimeter Calculator")
         print("9. Volume Calculator")
-        print("10. Exit")
+        print("10. Volume Converter")
+        print("11. Exit")
 
-        choice = input("Enter a choice (1-10): ")
+        choice = input("Enter a choice (1-11): ")
 
         if choice == "1":
             solve_quadratic()
@@ -474,11 +500,14 @@ def main():
             volume_calculator()
 
         elif choice == "10":
+            volume_converter()
+
+        elif choice == "11":
             print("Exiting the calculator program. Goodbye!")
             sys.exit()
 
         else:
-            print("Invalid choice. Please select a valid option (1-10). ")
+            print("Invalid choice. Please select a valid option (1-11). ")
 
 
 main()

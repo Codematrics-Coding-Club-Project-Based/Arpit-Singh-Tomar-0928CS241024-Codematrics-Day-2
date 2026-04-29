@@ -268,7 +268,29 @@ Calculate volume for different 3D shapes.
 - f-strings
 - .lower() (string handling)
 
+### 🧪 10. Volume Converter (Cubic Meters ↔ Liters)
+---
+Convert volume between cubic meters and liters.
 
+- Handles:
+  - ✅ Cubic Meters to Liters
+  - ✅ Liters to Cubic Meters
+  - ✅ User choice selection
+  - ❌ Invalid option handling
+
+- Uses:
+  - Conversion formula
+
+
+### 🧩 Feature Components Used
+---
+- input()
+- float()
+- if-elif-else
+- Arithmetic operators (*, /)
+- try-except
+- print()
+- f-strings
 
 ## 🛠️ Technologies Used
 
@@ -383,6 +405,12 @@ The factorial of 5 is 120
 - Implemented volume formulas for sphere, cube, and cylinder
 - Added shape-based input system
 - Improved geometric calculation features
+
+### ✅ Day 11 Update — 29/04/2026
+- Added Volume Converter
+- Implemented Cubic Meters ↔ Liters conversion
+- Added user choice-based conversion system
+- Improved real-world utility features
 
 
 ## 🚀 Future Improvements
