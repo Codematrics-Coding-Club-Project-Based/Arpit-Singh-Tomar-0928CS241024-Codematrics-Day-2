@@ -449,6 +449,84 @@ def volume_converter():
         print("Invalid input. Please enter a valid number for volume.")
         
 
+# Feature 11: Weight converter (kilograms to pounds, grams to ounces, etc and vice versa)
+
+def weight_converter():
+    print("Weight Converter")
+
+    try:
+        choice = input("Convert from (1) Kilograms to Pounds or (2) Pounds to Kilograms? Enter 1 or 2: ")
+
+        if choice == "1":
+            kilograms = float(input("Enter weight in kilograms: "))
+            pounds = kilograms * 2.20462
+            print(f"{kilograms} kilograms is equal to {pounds} pounds")
+
+        elif choice == "2":
+            pounds = float(input("Enter weight in pounds: "))
+            kilograms = pounds / 2.20462
+            print(f"{pounds} pounds is equal to {kilograms} kilograms")
+
+        else:
+            print("Invalid choice. Please enter 1 or 2.")
+
+    except ValueError:
+        print("Invalid input. Please enter a valid number for weight.")
+
+
+# Feature 12: Time Converter (seconds to minutes, hours to days, etc and vice versa)
+
+def time_converter():
+    print("Time Converter")
+
+    try:
+        choice = input("Convert from (1) Seconds to Minutes or (2) Minutes to Seconds? Enter 1 or 2: ")
+
+        if choice == "1":
+            seconds = float(input("Enter time in seconds: "))
+            minutes = seconds / 60
+            print(f"{seconds} seconds is equal to {minutes} minutes")
+
+        elif choice == "2":
+            minutes = float(input("Enter time in minutes: "))
+            seconds = minutes * 60
+            print(f"{minutes} minutes is equal to {seconds} seconds")
+
+        else:
+            print("Invalid choice. Please enter 1 or 2.")
+
+    except ValueError:
+        print("Invalid input. Please enter a valid number for time.")
+
+
+
+# Feature 13: Speed Converter (km/h to mph, m/s to km/h, etc and vice versa)
+
+def speed_converter():
+    print("Speed Converter")
+
+    try:
+        choice = input("Convert from (1) km/h to mph or (2) mph to km/h? Enter 1 or 2: ")
+
+        if choice == "1":
+            kmh = float(input("Enter speed in km/h: "))
+            mph = kmh * 0.621371
+            print(f"{kmh} km/h is equal to {mph} mph")
+
+        elif choice == "2":
+            mph = float(input("Enter speed in mph: "))
+            kmh = mph / 0.621371
+            print(f"{mph} mph is equal to {kmh} km/h")
+
+        else:
+            print("Invalid choice. Please enter 1 or 2.")
+
+    except ValueError:
+        print("Invalid input. Please enter a valid number for speed.")
+
+
+
+
 
 # Define Main Function for the program
 def main():
@@ -467,9 +545,10 @@ def main():
         print("8. Area and Perimeter Calculator")
         print("9. Volume Calculator")
         print("10. Volume Converter")
-        print("11. Exit")
+        print("11. Weight Converter")
+        print("12. Exit")
 
-        choice = input("Enter a choice (1-11): ")
+        choice = input("Enter a choice (1-12): ")
 
         if choice == "1":
             solve_quadratic()
@@ -503,11 +582,14 @@ def main():
             volume_converter()
 
         elif choice == "11":
+            weight_converter()
+
+        elif choice == "12":
             print("Exiting the calculator program. Goodbye!")
             sys.exit()
 
         else:
-            print("Invalid choice. Please select a valid option (1-11). ")
+            print("Invalid choice. Please select a valid option (1-12). ")
 
 
 main()

@@ -292,6 +292,78 @@ Convert volume between cubic meters and liters.
 - print()
 - f-strings
 
+### ⚖️ 11. Weight Converter (Kilograms ↔ Pounds)
+---
+Convert weight between kilograms and pounds.
+
+- Handles:
+  - ✅ Kilograms to Pounds
+  - ✅ Pounds to Kilograms
+  - ✅ User choice selection
+  - ❌ Invalid option handling
+
+- Uses:
+  - Conversion formula
+
+
+### 🧩 Feature Components Used
+---
+- input()
+- float()
+- if-elif-else
+- Arithmetic operators (*, /)
+- try-except
+- print()
+- f-strings
+
+### ⏱️ 12. Time Converter (Seconds ↔ Minutes)
+---
+Convert time between seconds and minutes.
+
+- Handles:
+  - ✅ Seconds to Minutes
+  - ✅ Minutes to Seconds
+  - ✅ User choice selection
+  - ❌ Invalid option handling
+
+- Uses:
+  - Conversion formula
+
+
+### 🧩 Feature Components Used
+---
+- input()
+- float()
+- if-elif-else
+- Arithmetic operators (*, /)
+- try-except
+- print()
+- f-strings
+
+### 🚗 13. Speed Converter (km/h ↔ mph)
+---
+Convert speed between kilometers per hour and miles per hour.
+
+- Handles:
+  - ✅ km/h to mph
+  - ✅ mph to km/h
+  - ✅ User choice selection
+  - ❌ Invalid option handling
+
+- Uses:
+  - Conversion formula
+
+### 🧩 Feature Components Used
+---
+- input()
+- float()
+- if-elif-else
+- Arithmetic operators (*, /)
+- try-except
+- print()
+- f-strings
+
+
 ## 🛠️ Technologies Used
 
 - Python 🐍
@@ -411,6 +483,13 @@ The factorial of 5 is 120
 - Implemented Cubic Meters ↔ Liters conversion
 - Added user choice-based conversion system
 - Improved real-world utility features
+
+### ✅ Day 12 Update — 30/04/2026
+- Added Weight Converter (kg ↔ pounds)
+- Added Time Converter (seconds ↔ minutes)
+- Added Speed Converter (km/h ↔ mph)
+- Expanded real-world utility features
+- Improved consistency across converters
 
 
 ## 🚀 Future Improvements
