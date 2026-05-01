@@ -485,6 +485,138 @@ Calculate exponential values.
 - print()
 - f-strings
 
+### 📊 19. Percentage Calculator
+---
+Calculate percentage of a given value.
+
+- Handles:
+  - ✅ Percentage calculation (part/total)
+  - ❌ Division by zero handling
+  - ❌ Invalid input handling
+
+- Uses:
+  - Percentage formula
+
+
+### 🧩 Feature Components Used
+---
+- input()
+- float()
+- if condition
+- Arithmetic operators (*, /)
+- Comparison operator (==)
+- try-except
+- print()
+- f-strings
+
+
+### 📈 20. Statistics Calculator (Mean, Median, Mode)
+---
+Calculate basic statistical measures.
+
+- Handles:
+  - ✅ Mean
+  - ✅ Median
+  - ✅ Mode
+  - ❌ Invalid input handling
+
+- Uses:
+  - statistics.mean()
+  - statistics.median()
+  - statistics.mode()
+
+
+### 🧩 Feature Components Used
+---
+- input()
+- float()
+- List comprehension
+- statistics module
+- try-except
+- print()
+- f-strings
+
+### 📐 21. Trigonometric Calculator (sin, cos, tan)
+---
+Calculate trigonometric values.
+
+- Handles:
+  - ✅ Sine (sin)
+  - ✅ Cosine (cos)
+  - ✅ Tangent (tan)
+  - ✅ Degree to radian conversion
+
+- Uses:
+  - math.sin()
+  - math.cos()
+  - math.tan()
+  - math.radians()
+
+
+### 🧩 Feature Components Used
+---
+- input()
+- float()
+- if-elif-else
+- math.sin(), math.cos(), math.tan()
+- math.radians()
+- try-except
+- print()
+- f-strings
+
+### 🔄 22. Inverse Trigonometric Calculator
+---
+Calculate inverse trigonometric values.
+
+- Handles:
+  - ✅ arcsin
+  - ✅ arccos
+  - ✅ arctan
+  - ✅ Result in degrees
+
+- Uses:
+  - math.asin()
+  - math.acos()
+  - math.atan()
+  - math.degrees()
+
+
+### 🧩 Feature Components Used
+---
+- input()
+- float()
+- if-elif-else
+- math.asin(), math.acos(), math.atan()
+- math.degrees()
+- try-except
+- print()
+- f-strings
+
+### 🔁 23. Degree ↔ Radian Converter
+---
+Convert angles between degrees and radians.
+
+- Handles:
+  - ✅ Degrees to Radians
+  - ✅ Radians to Degrees
+  - ❌ Invalid input handling
+
+- Uses:
+  - math.radians()
+  - math.degrees()
+
+
+### 🧩 Feature Components Used
+---
+- input()
+- float()
+- if-elif-else
+- math.radians()
+- math.degrees()
+- try-except
+- print()
+- f-strings
+
 
 ## 🛠️ Technologies Used
 
@@ -621,6 +753,14 @@ The factorial of 5 is 120
 - Added Exponential Calculator
 - Expanded scientific and conversion capabilities
 
+
+### ✅ Day 14 Update — 02/05/2026
+- Added Percentage Calculator
+- Added Statistics Calculator (Mean, Median, Mode)
+- Added Trigonometric Calculator (sin, cos, tan)
+- Added Inverse Trigonometric Calculator
+- Added Degree ↔ Radian Converter
+- Expanded scientific and statistical capabilities
 
 ## 🚀 Future Improvements
 - Add more mathematical operations

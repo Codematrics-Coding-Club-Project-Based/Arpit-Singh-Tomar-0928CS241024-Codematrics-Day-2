@@ -655,7 +655,135 @@ def exponential_calculator():
         print("Invalid input. Please enter a valid number for x.")
 
 
+# Feature 19: Percentage Calculator
 
+def percentage_calculator():
+    print("Percentage Calculator")
+
+    try:
+        total = float(input("Enter the total value: "))
+        part = float(input("Enter the part value: "))
+        if total == 0:
+            print("Total value cannot be zero.")
+            return
+        percentage = (part / total) * 100
+        print(f"{part} is {percentage}% of {total}")
+    except ValueError:
+        print("Invalid input. Please enter valid numbers for total and part.")
+
+
+
+# Featur 20: Mean Median and Mode Calculator
+
+def statistics_calculator():
+    print("Statistics Calculator (Mean, Median, Mode)")
+
+    try:
+        data = input("Enter a list of numbers separated by commas: ")
+        numbers = [float(num.strip()) for num in data.split(",")]
+
+        mean = statistics.mean(numbers)
+        median = statistics.median(numbers)
+        mode = statistics.mode(numbers)
+
+        print(f"Mean: {mean}")
+        print(f"Median: {median}")
+        print(f"Mode: {mode}")
+
+    except ValueError:
+        print("Invalid input. Please enter a valid list of numbers separated by commas.")
+    except statistics.StatisticsError as e:
+        print(f"Statistics error: {e}")
+
+
+# Feature 21: Trigonometric Calculator (sin, cos, tan, etc)
+
+
+def trigonometric_calculator():
+    print("Trigonometric Calculator (sin, cos, tan)")
+
+    try:
+        choice = input("Calculate (1) Sine, (2) Cosine or (3) Tangent? Enter 1, 2 or 3: ")
+
+        if choice in ["1", "2", "3"]:
+            angle = float(input("Enter the angle in degrees: "))
+            radians = math.radians(angle)
+
+            if choice == "1":
+                result = math.sin(radians)
+                print(f"sin({angle}°) is {result}")
+
+            elif choice == "2":
+                result = math.cos(radians)
+                print(f"cos({angle}°) is {result}")
+
+            elif choice == "3":
+                result = math.tan(radians)
+                print(f"tan({angle}°) is {result}")
+
+        else:
+            print("Invalid choice. Please enter 1, 2 or 3.")
+
+    except ValueError:
+        print("Invalid input. Please enter a valid number for angle.")
+
+
+
+# Feature 22: Inverse Trigonometric Calculator (arcsin, arccos, arctan)
+
+
+def inverse_trigonometric_calculator():
+    print("Inverse Trigonometric Calculator (arcsin, arccos, arctan)")
+
+    try:
+        choice = input("Calculate (1) arcsin, (2) arccos or (3) arctan? Enter 1, 2 or 3: ")
+
+        if choice in ["1", "2", "3"]:
+            value = float(input("Enter the value: "))
+
+            if choice == "1":
+                result = math.asin(value)
+                print(f"arcsin({value}) is {math.degrees(result)}°")
+
+            elif choice == "2":
+                result = math.acos(value)
+                print(f"arccos({value}) is {math.degrees(result)}°")
+
+            elif choice == "3":
+                result = math.atan(value)
+                print(f"arctan({value}) is {math.degrees(result)}°")
+
+        else:
+            print("Invalid choice. Please enter 1, 2 or 3.")
+
+    except ValueError:
+        print("Invalid input. Please enter a valid number for inverse trigonometric calculation.")
+
+
+# Feature 23: Degree to Radian Converter and vice versa
+
+
+def degree_radian_converter():
+    print("Degree to Radian Converter and vice versa")
+
+    try:
+        choice = input("Convert from (1) Degrees to Radians or (2) Radians to Degrees? Enter 1 or 2: ")
+
+        if choice == "1":
+            degrees = float(input("Enter angle in degrees: "))
+            radians = math.radians(degrees)
+            print(f"{degrees} degrees is equal to {radians} radians")
+
+        elif choice == "2":
+            radians = float(input("Enter angle in radians: "))
+            degrees = math.degrees(radians)
+            print(f"{radians} radians is equal to {degrees} degrees")
+
+        else:
+            print("Invalid choice. Please enter 1 or 2.")
+
+    except ValueError:
+        print("Invalid input. Please enter a valid number for angle conversion.")
 
 
 
@@ -685,9 +813,14 @@ def main():
         print("16. Number System Converter")
         print("17. Logarithm Calculator")
         print("18. Exponential Calculator")
-        print("19. Exit")
+        print("19. Percentage Calculator")
+        print("20. Mean, Median and Mode Calculator")
+        print("21. Trigonometric Calculator")
+        print("22. Inverse Trigonometric Calculator")
+        print("23. Degree to Radian Converter")
+        print("24. Exit")
 
-        choice = input("Enter a choice (1-19): ")
+        choice = input("Enter a choice (1-24): ")
 
         if choice == "1":
             solve_quadratic()
@@ -746,11 +879,26 @@ def main():
             exponential_calculator()
 
         elif choice == "19":
-            print("Exiting the calculator program. Goodbye!")
+            percentage_calculator()
+
+        elif choice == "20":
+            statistics_calculator()
+
+        elif choice == "21":
+            trigonometric_calculator()
+
+        elif choice == "22":
+            inverse_trigonometric_calculator()
+
+        elif choice == "23":
+            degree_radian_converter()
+
+        elif choice == "24":
+            print("Thank you for using the Python calculator. Goodbye!")
             sys.exit()
 
         else:
-            print("Invalid choice. Please select a valid option (1-19). ")
+            print("Invalid choice. Please select a valid option (1-24). ")
 
 
 main()
