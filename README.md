@@ -656,13 +656,34 @@ Welcome to the Python calculator!
  Please select a Feature to use: 
 1. Quadratic Equation Calculator
 2. Factorial Calculator
-3. Exit
+3. Matrix Utilities
+4. Square Root Calculator
+5. Power Calculator
+6. Temperature Converter
+7. Length Converter
+8. Area and Perimeter Calculator
+9. Volume Calculator
+10. Volume Converter
+11. Weight Converter
+12. Time Converter
+13. Speed Converter
+14. Pressure Converter
+15. Power Converter
+16. Number System Converter
+17. Logarithm Calculator
+18. Exponential Calculator
+19. Percentage Calculator
+20. Mean, Median and Mode Calculator
+21. Trigonometric Calculator
+22. Inverse Trigonometric Calculator
+23. Degree to Radian Converter
+24. Exit
+Enter a choice (1-24): 6
+Temperature Converter
+Convert from (1) Celsius to Fahrenheit or (2) Fahrenheit to Celsius? Enter 1 or 2: 1
+Enter temperature in Celsius: 34
+34.0°C is equal to 93.2°F
 
-Enter a choice (1-3): 2
-
-Factorial Calculator (n!)
-Enter a positive integer: 5
-The factorial of 5 is 120
 
 ```
 ## 📅 Updates
