@@ -525,6 +525,138 @@ def speed_converter():
         print("Invalid input. Please enter a valid number for speed.")
 
 
+# Feature 14: Pressure converter (Pascal to atm, bar to psi, etc and vice versa)
+
+def pressure_converter():
+    print("Pressure Converter")
+
+    try:
+        choice = input("Convert from (1) Pascal to atm or (2) atm to Pascal? Enter 1 or 2: ")
+
+        if choice == "1":
+            pascal = float(input("Enter pressure in Pascals: "))
+            atm = pascal / 101325
+            print(f"{pascal} Pascals is equal to {atm} atm")
+
+        elif choice == "2":
+            atm = float(input("Enter pressure in atm: "))
+            pascal = atm * 101325
+            print(f"{atm} atm is equal to {pascal} Pascals")
+
+        else:
+            print("Invalid choice. Please enter 1 or 2.")
+
+    except ValueError:
+        print("Invalid input. Please enter a valid number for pressure.")
+
+
+# Feature 15: Power Converter (Watts to Horsepower, etc and vice versa)
+
+def power_converter():
+    print("Power Converter")
+
+    try:
+        choice = input("Convert from (1) Watts to Horsepower or (2) Horsepower to Watts? Enter 1 or 2: ")
+
+        if choice == "1":
+            watts = float(input("Enter power in Watts: "))
+            horsepower = watts * 0.00134102
+            print(f"{watts} Watts is equal to {horsepower} Horsepower")
+
+        elif choice == "2":
+            horsepower = float(input("Enter power in Horsepower: "))
+            watts = horsepower / 0.00134102
+            print(f"{horsepower} Horsepower is equal to {watts} Watts")
+
+        else:
+            print("Invalid choice. Please enter 1 or 2.")
+
+    except ValueError:
+        print("Invalid input. Please enter a valid number for power.")
+
+
+# Feature 16: Number system converter (Binary to Decimal, Decimal to Hexadecimal, octal to hexadecimal and vice versa)
+
+
+def number_system_converter():
+    print("Number System Converter")
+
+    try:
+        choice = input("Convert from (1) Binary to Decimal, (2) Decimal to Hexadecimal, (3) Octal to Hexadecimal or (4) Hexadecimal to Octal? Enter 1, 2, 3 or 4: ")
+
+        if choice == "1":
+            binary = input("Enter a binary number: ")
+            decimal = int(binary, 2)
+            print(f"{binary} in decimal is {decimal}")
+
+        elif choice == "2":
+            decimal = int(input("Enter a decimal number: "))
+            hexadecimal = hex(decimal)
+            print(f"{decimal} in hexadecimal is {hexadecimal}")
+
+        elif choice == "3":
+            octal = input("Enter an octal number: ")
+            hexadecimal = hex(int(octal, 8))
+            print(f"{octal} in hexadecimal is {hexadecimal}")
+
+        elif choice == "4":
+            hexadecimal = input("Enter a hexadecimal number: ")
+            octal = oct(int(hexadecimal, 16))
+            print(f"{hexadecimal} in octal is {octal}")
+
+        else:
+            print("Invalid choice. Please enter 1, 2, 3 or 4.")
+
+    except ValueError:
+        print("Invalid input. Please enter a valid number for conversion.")
+
+
+# Feature 17: Logarithm Calculator (log base 10, log base e, etc)
+
+def logarithm_calculator():
+    print("Logarithm Calculator")
+
+    try:
+        choice = input("Calculate (1) Log base 10 or (2) Natural Log (base e)? Enter 1 or 2: ")
+
+        if choice == "1":
+            number = float(input("Enter a positive number: "))
+            if number <= 0:
+                print("Please enter a positive number.")
+                return
+            result = math.log10(number)
+            print(f"Log base 10 of {number} is {result}")
+
+        elif choice == "2":
+            number = float(input("Enter a positive number: "))
+            if number <= 0:
+                print("Please enter a positive number.")
+                return
+            result = math.log(number)
+            print(f"Natural log (base e) of {number} is {result}")
+
+        else:
+            print("Invalid choice. Please enter 1 or 2.")
+
+    except ValueError:
+        print("Invalid input. Please enter a valid number for logarithm calculation.")
+
+
+# Feature 18: Exponential Calculator (e^x)
+
+def exponential_calculator():
+    print("Exponential Calculator (e^x)")
+
+    try:
+        x = float(input("Enter a number (x): "))
+        result = math.exp(x)
+        print(f"e raised to the power of {x} is {result}")
+    except ValueError:
+        print("Invalid input. Please enter a valid number for x.")
+
+
+
+
 
 
 
@@ -546,9 +678,16 @@ def main():
         print("9. Volume Calculator")
         print("10. Volume Converter")
         print("11. Weight Converter")
-        print("12. Exit")
+        print("12. Time Converter")
+        print("13. Speed Converter")
+        print("14. Pressure Converter")
+        print("15. Power Converter")
+        print("16. Number System Converter")
+        print("17. Logarithm Calculator")
+        print("18. Exponential Calculator")
+        print("19. Exit")
 
-        choice = input("Enter a choice (1-12): ")
+        choice = input("Enter a choice (1-19): ")
 
         if choice == "1":
             solve_quadratic()
@@ -583,13 +722,35 @@ def main():
 
         elif choice == "11":
             weight_converter()
+            
 
         elif choice == "12":
+             time_converter()
+
+        elif choice == "13":
+            speed_converter()
+
+        elif choice == "14":
+            pressure_converter()
+
+        elif choice == "15":
+           power_converter()
+
+        elif choice == "16":
+            number_system_converter()
+
+        elif choice == "17":
+            logarithm_calculator() 
+
+        elif choice == "18":
+            exponential_calculator()
+
+        elif choice == "19":
             print("Exiting the calculator program. Goodbye!")
             sys.exit()
 
         else:
-            print("Invalid choice. Please select a valid option (1-12). ")
+            print("Invalid choice. Please select a valid option (1-19). ")
 
 
 main()

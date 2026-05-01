@@ -363,6 +363,128 @@ Convert speed between kilometers per hour and miles per hour.
 - print()
 - f-strings
 
+### 🧪 14. Pressure Converter (Pascal ↔ atm)
+---
+Convert pressure between Pascals and atmospheres.
+
+- Handles:
+  - ✅ Pascal to atm
+  - ✅ atm to Pascal
+  - ✅ User choice selection
+  - ❌ Invalid option handling
+
+- Uses:
+  - Conversion formula
+
+
+### 🧩 Feature Components Used
+---
+- input()
+- float()
+- if-elif-else
+- Arithmetic operators (*, /)
+- try-except
+- print()
+- f-strings
+
+### ⚡ 15. Power Converter (Watts ↔ Horsepower)
+---
+Convert power between watts and horsepower.
+
+- Handles:
+  - ✅ Watts to Horsepower
+  - ✅ Horsepower to Watts
+  - ✅ User choice selection
+  - ❌ Invalid option handling
+
+- Uses:
+  - Conversion formula
+
+
+### 🧩 Feature Components Used
+---
+- input()
+- float()
+- if-elif-else
+- Arithmetic operators (*, /)
+- try-except
+- print()
+- f-strings
+
+### 🔢 16. Number System Converter
+---
+Convert numbers between different number systems.
+
+- Handles:
+  - ✅ Binary → Decimal
+  - ✅ Decimal → Hexadecimal
+  - ✅ Octal → Hexadecimal
+  - ✅ Hexadecimal → Octal
+  - ❌ Invalid input handling
+
+- Uses:
+  - int()
+  - hex()
+  - oct()
+
+
+### 🧩 Feature Components Used
+---
+- input()
+- int()
+- if-elif-else
+- Built-in conversion functions (int, hex, oct)
+- try-except
+- print()
+- f-strings
+
+### 📊 17. Logarithm Calculator
+---
+Calculate logarithmic values.
+
+- Handles:
+  - ✅ Log base 10
+  - ✅ Natural log (base e)
+  - ❌ Rejects non-positive inputs
+
+- Uses:
+  - math.log10()
+  - math.log()
+
+
+### 🧩 Feature Components Used
+---
+- input()
+- float()
+- if condition
+- math.log10()
+- math.log()
+- Comparison operators (<=)
+- try-except
+- print()
+- f-strings
+
+### 📈 18. Exponential Calculator (e^x)
+---
+Calculate exponential values.
+
+- Handles:
+  - ✅ e raised to the power x
+  - ❌ Invalid input handling
+
+- Uses:
+  - math.exp()
+
+
+### 🧩 Feature Components Used
+---
+- input()
+- float()
+- math.exp()
+- try-except
+- print()
+- f-strings
+
 
 ## 🛠️ Technologies Used
 
@@ -490,6 +612,14 @@ The factorial of 5 is 120
 - Added Speed Converter (km/h ↔ mph)
 - Expanded real-world utility features
 - Improved consistency across converters
+
+### ✅ Day 13 Update — 01/05/2026
+- Added Pressure Converter (Pascal ↔ atm)
+- Added Power Converter (Watts ↔ Horsepower)
+- Added Number System Converter
+- Added Logarithm Calculator
+- Added Exponential Calculator
+- Expanded scientific and conversion capabilities
 
 
 ## 🚀 Future Improvements
